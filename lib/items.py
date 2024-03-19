@@ -27,6 +27,18 @@ def move_items_to_container(item_name, source_container_serial, destination_cont
         Items.Move(item, destination_container_serial, -1)
         Misc.Pause(1000)
 
+def move_items_to_container_no_merge_respect_weight(item_name, source_container_serial, destination_container_serial):
+    items_on_container = search_item_on_container(item_name, source_container_serial)
+    for item in items_on_container:
+        Player.HeadMessage(90, f'Moving {item_name} to container.')
+        player_remaining_weight = Player.MaxWeight - Player.Weight
+        Player.HeadMessage(90, f'Player weight remaining {player_remaining_weight}.')
+        if player_remaining_weight > item.Weight:
+            Items.Move(item, destination_container_serial, -1, 0, 0)
+            Misc.Pause(1000)
+        else:
+            break
+
 '''
 Split the items stacks on a specified.container
 Useful for decrease the item smelting loss
