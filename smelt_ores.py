@@ -33,12 +33,15 @@ if len(forges) > 0:
     while len(ores) > 0:
         removed_ores = []
         for ore in ores:
-            Items.UseItem(ore)
-            Target.WaitForTarget(10000, False)
-            Target.TargetExecute(forges[0])
-            Misc.Pause(2000)
-            if not check_result():
-                Player.HeadMessage(90,'Ore not smeltable.') 
+            if ore.Weight > 2:
+                Items.UseItem(ore)
+                Target.WaitForTarget(10000, False)
+                Target.TargetExecute(forges[0])
+                Misc.Pause(2000)
+                if not check_result():
+                    Player.HeadMessage(90,'Ore not smeltable.') 
+                    removed_ores.append(ore)
+            else:
                 removed_ores.append(ore)
         ores = list(set(ores) - set(removed_ores))
         if len(ores) > 0:
