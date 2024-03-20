@@ -1,0 +1,14 @@
+pack_horse_serial = '0x12345678'
+
+healing_allies = [
+    'Ally1',
+    'Ally2',
+    'Ally3',
+    'Ally4',
+    'AllyN'
+]
+
+healing_pauses = {
+    'afterBandage': 4000,
+    'loop': 1000
+}

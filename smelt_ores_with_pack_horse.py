@@ -1,6 +1,11 @@
-from lib.items import search_item_on_container, split_item_stack_on_container, move_items_to_container, move_items_to_container_no_merge_respect_weight
+from lib.items import (
+    search_item_on_container,
+    split_item_stack_on_container,
+    move_items_to_container,
+    move_items_to_container_no_merge_respect_weight
+)
+from lib.variables import pack_horse_serial
 
-pack_horse_serial = 0x0021E650
 pack_horse_backpack = Mobiles.FindBySerial(pack_horse_serial).Backpack.Serial
 
 def check_result():
