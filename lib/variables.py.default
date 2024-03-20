@@ -1,4 +1,8 @@
-pack_horse_serial = '0x12345678'
+# Player Variables
+
+inscription_scroll_batch = {
+    'recall': 15
+}
 
 healing_allies = [
     'Ally1',
@@ -11,4 +15,17 @@ healing_allies = [
 healing_pauses = {
     'afterBandage': 4000,
     'loop': 1000
+}
+
+house_containers = {
+    'magery_reagents': 0x12345678,
+    'inscription_tools': 0x12345678
+}
+
+pack_horse_serial = 0x12345678
+
+# UO Variables
+
+gumps = {
+    'inscription': 1613455458
 }
