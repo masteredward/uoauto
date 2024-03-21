@@ -21,7 +21,7 @@ def find_forge():
     forge_filter.Name = 'forge'
     return Items.ApplyFilter(forge_filter)
 
-move_items_to_container('ore', Player.Backpack.Serial, Player.Backpack.Serial)
+move_items_to_container('ore', -1, Player.Backpack.Serial, Player.Backpack.Serial)
 split_item_stack_on_container('ore', Player.Backpack.Serial, 2)
 
 forges = find_forge()

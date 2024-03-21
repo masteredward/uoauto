@@ -22,10 +22,31 @@ house_containers = {
     'inscription_tools': 0x12345678
 }
 
+ores_to_skip_merge = [
+  'bronze',
+  'golden',
+  'agapite',
+  'verite',
+  'valorite'
+]
+
 pack_horse_serial = 0x12345678
+
 
 # UO Variables
 
 gumps = {
     'inscription': 1613455458
+}
+
+ore_colors = {
+    'iron': 0x0000,
+    'dullcopper': 0x0973,
+    'shadow': 0x0966,
+    'copper': 0x096d,
+    'bronze': 0x0972,
+    'golden': 0x08a5,
+    'agapite': 0x0979,
+    'verite': 0x089f,
+    'valorite': 0x08ab
 }
